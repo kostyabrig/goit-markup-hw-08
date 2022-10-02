@@ -98,15 +98,12 @@ button, input[type=submit], input[type=reset] {
   font-family: var(--font-secondary);
   font-size: 26px;
   font-weight: 700;
+  color: var(--studio-black);
+  text-decoration: none;
 }
 
 .logo__accent--blue {
   color: var(--studio-blue);
-}
-
-.logo {
-  color: var(--studio-black);
-  text-decoration: none;
 }
 
 .backdrop {
@@ -729,6 +726,10 @@ button.modal-close-btn {
   color: var(--studio-white);
   display: block;
   margin-bottom: 20px;
+}
+
+.logo__accent-blue {
+  color: var(--studio-blue);
 }
 
 .addres-box__address {
