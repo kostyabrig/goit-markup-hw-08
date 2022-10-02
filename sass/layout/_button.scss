@@ -1,0 +1,18 @@
+.button
+ {
+    font-family: var(--font-primary);
+    color: var(--studio-white);
+    background-color: var(--studio-blue);
+    padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    transition: background-color var(--studio-main-transition);
+}
+.button:hover {
+    background-color: var(--studio-hover-blue);
+    cursor: pointer;
+}

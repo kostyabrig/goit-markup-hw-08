@@ -1,0 +1,26 @@
+.section.whatwedo {
+    padding-top: 0px;
+}
+.whatwedo__container {
+    display: flex;
+    justify-content: space-between;
+}
+.whatwedo__img {
+    position: relative;
+    display: flex;
+}
+.whatwedo__overlay {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--studio-darkbg);
+    opacity: 0.8;
+    color: var(--studio-white);
+    text-transform: uppercase;
+    text-align: center;
+    bottom: 0;
+}

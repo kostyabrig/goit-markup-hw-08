@@ -1,0 +1,18 @@
+.clients-list {
+    display:flex;
+    justify-content: space-between;
+}
+.client-iteam__button {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--studio-icons);
+    box-sizing: border-box;
+    border-radius: 4px;
+    fill: var(--studio-icons);
+    transition: fill var(--studio-main-transition), border-color var(--studio-main-transition);
+}
+.client-iteam__button:hover,
+.client-iteam__button:focus {
+    border: 1px solid var(--studio-blue);
+    fill: var(--studio-blue);
+}

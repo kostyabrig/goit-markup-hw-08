@@ -1,0 +1,31 @@
+.features__container {
+    display: flex;
+    justify-content: space-between;
+}
+.features__iteam {
+    width: 270px;
+}
+.features__iteam-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--studio-lightbg);
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.features__iteam-icon svg {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+.features__iteam-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: var(--studio-dark);
+    margin-bottom: 10px;
+}
