@@ -13,12 +13,13 @@
     background-color:var(--studio-white);
     fill: var(--studio-icons);
     transition: fill var(--studio-main-transition), background-color var(--studio-main-transition);
-}
-.soc-link-item:hover,
-.soc-link-item:focus {
-    background-color: var(--studio-blue);
-    fill: var(--studio-white);
-    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: var(--studio-blue);
+        fill: var(--studio-white);
+        cursor: pointer;
+    }
 }
 .soc-iteam svg {
     width:20px;

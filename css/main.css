@@ -430,6 +430,7 @@ button.modal-close-btn {
   padding-top: 200px;
   padding-bottom: 200px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .hero__title {
@@ -442,10 +443,6 @@ button.modal-close-btn {
   margin-right: auto;
   margin-bottom: 30px;
   width: 696px;
-}
-
-.hero > .container {
-  text-align: center;
 }
 
 .features__container {
@@ -562,9 +559,7 @@ button.modal-close-btn {
   fill: var(--studio-icons);
   transition: fill var(--studio-main-transition), background-color var(--studio-main-transition);
 }
-
-.soc-link-item:hover,
-.soc-link-item:focus {
+.soc-link-item:hover, .soc-link-item:focus {
   background-color: var(--studio-blue);
   fill: var(--studio-white);
   cursor: pointer;
@@ -618,10 +613,7 @@ button.modal-close-btn {
   transition: color var(--studio-main-transition);
   transition: background-color var(--studio-main-transition);
 }
-
-.portfolio__filtr:hover,
-.portfolio__filtr:active,
-.portfolio__filtr:focus {
+.portfolio__filtr:hover, .portfolio__filtr.portfolio__filtr:active, .portfolio__filtr.portfolio__filtr:focus {
   font-family: var(--font-primary);
   background-color: var(--studio-blue);
   color: var(--studio-white);
@@ -638,6 +630,12 @@ button.modal-close-btn {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.project:nth-child(3n) {
+  margin-right: 0;
+}
+.project:nth-last-child(-n+3) {
+  margin-bottom: 0;
 }
 
 .project__description {
@@ -661,13 +659,20 @@ button.modal-close-btn {
   margin-top: 4px;
 }
 
-.project-link {
+.project__link {
   display: block;
   text-decoration: none;
   transition: box-shadow var(--studio-main-transition);
 }
+.project__link:hover .overlay, .project__link.project__link:focus .overlay {
+  transform: translateY(0%);
+}
+.project__link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
 
-.project-overlay-wraper {
+.project__overlay-wraper {
   position: relative;
   width: 370px;
   height: 294px;
@@ -689,24 +694,6 @@ button.modal-close-btn {
   overflow: auto;
   transform: translateY(100%);
   transition: transform var(--studio-main-transition);
-}
-
-.project-link:hover .overlay,
-.project-link:focus .overlay {
-  transform: translateY(0%);
-}
-
-.project-link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-}
-
-.project:nth-child(3n) {
-  margin-right: 0;
-}
-
-.project:nth-last-child(-n+3) {
-  margin-bottom: 0;
 }
 
 .footer {
