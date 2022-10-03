@@ -1,23 +1,73 @@
 .hero {
-    max-width: 1600px;
-    height: 600px;
-    margin: 0 auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url('../images/hero-bg-img.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top:200px;
-    padding-bottom:200px;
-    box-sizing: border-box;
-    text-align: center;
-}
-.hero__title {
-    font-size: 44px;
-    font-weight: 900;
-    letter-spacing: 0.06em;
+    background-color: #c4c4c4;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url("../images/hero-480.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-width: 480px;
+      height: 400px;
+      margin: 0 auto;
+  
+      padding-top: 118px;
+      padding-bottom: 118px;
+      text-align: center;    
+  
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    
+      background-image: url("../images/hero-480@2x.jpg");
+     
+    }
+  
+  @media screen and (min-width: 768px) {
+     
+      max-width: 768px;
+      background-image: url("../images/hero-tablet.jpg");
+     
+    }
+  
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+     
+      background-image: url("../images/hero-tablet@2x.jpg");
+      
+    }
+  
+  @media screen and (min-width: 1200px) {
+      max-width: 1600px;
+      height: 600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-image: url("../images/hero-desktop.jpg");
+    }
+  
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    
+      background-image: url("../images/hero-desktop@2x.jpg");
+  }
+  }
+  
+  .hero__title {
     text-transform: uppercase;
-    color: var(--studio-white);
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px;
+    margin: 0 auto;
     margin-bottom: 30px;
-    width: 696px;
-}
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    color: var(--studio-white);
+  
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }

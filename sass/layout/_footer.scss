@@ -6,12 +6,39 @@
     padding-bottom:60px;
 }
 .footer__blox {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          gap: 60px;
+          padding-left: 0px;
+      }
+      
+      @media screen and (min-width: 1200px) {
+          display: flex;
+          align-items: baseline;
+          text-align: left;
+      }
 }
+.footer__block {
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+    
+    
+}
+@media screen and (max-width: 767px) {
+    .footer__block + .footer__block {
+        margin-top: 60px;
+        }
+}
+
 .footer .logo {
     color: var(--studio-white);
+    margin-right: 0px;
     display: block;
     margin-bottom: 20px;
 }
@@ -35,8 +62,11 @@ margin-bottom: 9px;
     text-decoration: none;
 }
 .addres-box {
+    @media screen and (min-width: 1200px) {
     margin-right: 70px;
+    }
 }
+
 .footer-title {
     font-weight: 700;
     text-transform: uppercase;
@@ -44,8 +74,10 @@ margin-bottom: 9px;
 }
 .social-icons-footer {
     display: flex;
+    justify-content: center;
+    @media screen and (min-width: 1200px) {
     justify-content:start;
-
+    }
 }
 .soc-footer-link {
     width: 44px;
@@ -69,9 +101,14 @@ margin-bottom: 9px;
 }
 .footer-form-subscribe {
     display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    }
 }
-.form-input {
-    width: 358px;
+.footer-form__input {
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -80,9 +117,25 @@ margin-bottom: 9px;
     background: transparent;
     padding: 15px;
     margin-right:12px;
-}
-.form-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    @media screen and (min-width: 1200px) {
+    width: 358px;
+    }
+   
+    &:focus {
+        border: 1px solid var(--studio-blue);
+    }
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    @media screen and (min-width: 768px) {
+          width: 450px;
+    }
+      
+    @media screen and (min-width: 1200px) {
+          width: 358px;
+    }
+
 }
 .button >.svg {
     margin-left:10px;
@@ -93,4 +146,10 @@ margin-bottom: 9px;
 .subscribe-btn {
     display: flex;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;   
+    @media screen and (min-width: 1200px) {
+        margin-top: 0px;
+  }
 }

@@ -14,7 +14,6 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
@@ -23,34 +22,85 @@
     <div class="container main-nav">
       <nav class="page-nav">
         <a href="index.html" class="logo"><span class="logo__accent--blue">Web</span>Studio</a>
-        <ul class="nav__menu">
+        <ul class="nav__menu list">
           <li class="menu__iteam">
-            <a href="index.html" class="link current">Студія</a>
+            <a href="index.html" class="nav__menu__link link current">Студія</a>
           </li>
           <li class="menu__iteam">
-            <a href="portfolio.html" class="link">Портфоліо</a>
+            <a href="portfolio.html" class="nav__menu__link link">Портфоліо</a>
           </li>
-          <li class="menu__iteam"><a href="#" class="link">Контакти</a></li>
+          <li class="menu__iteam"><a href="#" class="nav__menu__link link">Контакти</a></li>
         </ul>
       </nav>
-      <ul class="nav__contacts">
-        <li class="list__iteam">
-          <a class="contacts__mail link" href="mailto:info@devstudio.com">
+      <ul class="nav__contacts list">
+        <li class="contacts__list">
+          <a class="contacts__link link email" href="mailto:info@devstudio.com">
             <svg class="svg" width="16" height="12">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com</a>
         </li>
-        <li class="list__iteam">
-          <a class="contacts__num link" href="tel:+380961111111">
+        <li class="contacts__list">
+          <a class="contacts__link link num" href="tel:+380961111111">
             <svg class="svg" width="10" height="16">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <button type="button" class="menu-open-btn" data-menu-open>
+        <svg class="" width="40" height="40">
+          <use href="./images/icons.svg#icon-burger" class=""></use>
+        </svg>
+      </button>
     </div>
   </header>
+  <div class="mob-menu is-hidden" data-menu>
+    <button type="button" class="menu-close-btn" data-menu-close>
+      <svg class="" width="40" height="40">
+        <use href="./images/icons.svg#icon-close-black-18dp" class=""></use>
+      </svg>
+    </button>
+    <div class="mob-menu-wrap">
+      <nav class="mob-menu-nav">
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-item">
+            <a href="./index.html" class="mob-menu-link current-mob link">Студія</a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="./portfolio.html" class="mob-menu-link link">Портфоліо</a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="" class="mob-menu-link link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mob-connect">
+        <ul class="mob-connect-list list">
+          <li class="mob-connect-item item">
+            <a class="mob-connect-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="mob-connect-item item">
+            <a class="mob-connect-phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="mob-media list">
+        <li class="mob-media-item item">
+          <a href="" class="mob-media-link link" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+        </li>
+        <li class="mob-media-item item">
+          <a href="" class="mob-media-link link" target="_blank" rel="noopener noreferrer nofollow">Twitter</a>
+        </li>
+        <li class="mob-media-item item">
+          <a href="" class="mob-media-link link" target="_blank" rel="noopener noreferrer nofollow">Facebook</a>
+        </li>
+        <li class="mob-media-item item">
+          <a href="" class="mob-media-link link" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <main class="main">
     <!--Hero Section -->
     <section class="hero">
@@ -62,8 +112,8 @@
     <!-- Features -->
     <section class="section features">
       <div class="container">
-        <h2 class="section_title" hidden>Наші особливості</h2>
-        <ul class="features__container">
+        <h2 class="section__title" hidden>Наші особливості</h2>
+        <ul class="features__container list">
           <li class="features__iteam">
             <div class="features__iteam-icon">
               <svg class="icon-uvaga">
@@ -112,22 +162,44 @@
       </div>
     </section>
     <!-- What We Do -->
-    <section class="section whatwedo">
+    <section class="whatwedo section">
       <div class="container">
-        <h2 class="section_title">Чим ми займаємося</h2>
-        <ul class="whatwedo__container">
+        <h2 class="section__title">Чим ми займаємося</h2>
+        <ul class="whatwedo__container list">
           <li class="whatwedo__img">
-            <img src="./images/whatwedo_box_1.jpg" alt="Зображення компьютера та планшету" width="370" height="294" />
+            <picture>
+              <source srcset="./images/whatwedo-1-desktop.webp 1x, ./images/whatwedo-1-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp" />
+              <source srcset="./images/whatwedo-1-desktop.jpg 1x, ./images/whatwedo-1-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)" />
+
+              <img src="./images/whatwedo-1-desktop.jpg" alt="retina picture" class="picture-img"
+                alt="Зображення компьютера та планшету" width="370" height="294" />
+            </picture>
             <p class="whatwedo__overlay">Десктопні додатки</p>
           </li>
           <li class="whatwedo__img">
-            <img src="./images/whatwedo_box_2.jpg" alt="Зображення тестування мобиільного застосунку" width="370"
-              height="294" />
+            <picture>
+              <source srcset="./images/whatwedo-2-desktop.webp 1x, ./images/whatwedo-2-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp" />
+              <source srcset="./images/whatwedo-2-desktop.jpg 1x, ./images/whatwedo-2-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)" />
+
+              <img src="./images/whatwedo-2-desktop.jpg" alt="Зображення тестування мобиільного застосунку" width="370"
+                height="294" />
+            </picture>
             <p class="whatwedo__overlay">Мобільні додатки</p>
           </li>
           <li class="whatwedo__img">
-            <img src="./images/whatwedo_box_3.jpg" alt="Зображення користувача iPad який працює з палітрою" width="370"
-              height="294" />
+            <picture>
+              <source srcset="./images/whatwedo-3-desktop.webp 1x, ./images/whatwedo-3-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp" />
+              <source srcset="./images/whatwedo-3-desktop.jpg 1x, ./images/whatwedo-3-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)" />
+
+              <img src="./images/whatwedo-3-desktop.jpg" alt="Зображення користувача iPad який працює з палітрою"
+                width="370" height="294" />
+            </picture>
             <p class="whatwedo__overlay">Дизайнерські рішення</p>
           </li>
         </ul>
@@ -136,14 +208,24 @@
     <!-- Crew -->
     <section class="section crew">
       <div class="container">
-        <h2 class="section_title">Наша команда</h2>
-        <ul class="crew__wraper">
+        <h2 class="section__title">Наша команда</h2>
+        <ul class="crew__wraper list">
           <li class="crew__iteam">
-            <img src="./images/crew_igor.jpg" alt="Image of Igor Demianenko - Product Designer" width="270"
-              height="260" />
+            <picture>
+              <source srcset="./images/crew-img-desktop-1.jpg 1x, 
+              ./images/crew-img-desktop-1@2x.jpg 2x" media="(min-width:1200px)">
+
+              <source srcset="./images/crew-img-tab-1.jpg 1x, 
+              ./images/crew-img-tab-1@2x.jpg 2x" media="(min-width:768px)">
+
+              <source srcset="./images/crew-img-mobile-1.jpg 1x, 
+              ./images/crew-img-mobile-1@2x.jpg 2x" media="(max-width:767px)">
+
+              <img class="crew__iteam__photo" alt="Image of Igor Demianenko - Product Designer" />
+            </picture>
             <h3 class="crew__iteam__name-title">Ігор Дем'яненко</h3>
             <p class="crew__iteam__job-title">Product Designer</p>
-            <ul class="social-icons">
+            <ul class="social-icons list">
               <li class="soc-iteam">
                 <a href="#" class="soc-link-item">
                   <svg class="icon-instagram">
@@ -175,11 +257,21 @@
             </ul>
           </li>
           <li class="crew__iteam">
-            <img src="./images/crew_olga.jpg" alt="Image of Olga Repina - Frontend Developer" width="270"
-              height="260" />
+            <picture>
+              <source srcset="./images/crew-img-desktop-2.jpg 1x, 
+              ./images/crew-img-desktop-2@2x.jpg 2x" media="(min-width:1200px)">
+
+              <source srcset="./images/crew-img-tab-2.jpg 1x, 
+              ./images/crew-img-tab-2@2x.jpg 2x" media="(min-width:768px)">
+
+              <source srcset="./images/crew-img-mobile-2.jpg 1x, 
+              ./images/crew-img-mobile-2@2x.jpg 2x" media="(max-width:767px)">
+
+              <img class="crew__iteam__photo" alt="Image of Olga Repina - Frontend Developer" />
+            </picture>
             <h3 class="crew__iteam__name-title">Ольга Рєпіна</h3>
             <p class="crew__iteam__job-title">Frontend Developer</p>
-            <ul class="social-icons">
+            <ul class="social-icons list">
               <li class="soc-iteam">
                 <a href="#" class="soc-link-item">
                   <svg class="icon-instagram">
@@ -211,10 +303,21 @@
             </ul>
           </li>
           <li class="crew__iteam">
-            <img src="./images/crew_mykola.jpg" alt="Image of Mykola Tarasov - Marketing" width="270" height="260" />
+            <picture>
+              <source srcset="./images/crew-img-desktop-3.jpg 1x, 
+              ./images/crew-img-desktop-3@2x.jpg 2x" media="(min-width:1200px)">
+
+              <source srcset="./images/crew-img-tab-3.jpg 1x, 
+              ./images/crew-img-tab-3@2x.jpg 2x" media="(min-width:768px)">
+
+              <source srcset="./images/crew-img-mobile-3.jpg 1x, 
+              ./images/crew-img-mobile-3@2x.jpg 2x" media="(max-width:767px)">
+
+              <img class="crew__iteam__photo" alt="Image of Mykola Tarasov - Marketing" />
+            </picture>
             <h3 class="crew__iteam__name-title">Микола Тарасов</h3>
             <p class="crew__iteam__job-title">Marketing</p>
-            <ul class="social-icons">
+            <ul class="social-icons list">
               <li class="soc-iteam">
                 <a href="#" class="soc-link-item">
                   <svg class="icon-instagram">
@@ -246,11 +349,21 @@
             </ul>
           </li>
           <li class="crew__iteam">
-            <img src="./images/crew_mykhailo.jpg" alt="Image of Mykhylo Yermakov - UI Designer" width="270"
-              height="260" />
+            <picture>
+              <source srcset="./images/crew-img-desktop-4.jpg 1x, 
+              ./images/crew-img-desktop-4@2x.jpg 2x" media="(min-width:1200px)">
+
+              <source srcset="./images/crew-img-tab-4.jpg 1x, 
+              ./images/crew-img-tab-4@2x.jpg 2x" media="(min-width:768px)">
+
+              <source srcset="./images/crew-img-mobile-4.jpg 1x, 
+              ./images/crew-img-mobile-4@2x.jpg 2x" media="(max-width:767px)">
+
+              <img class="crew__iteam__photo" alt="Image of Mykhylo Yermakov - UI Designer" />
+            </picture>
             <h3 class="crew__iteam__name-title">Михайло Єрмаков</h3>
             <p class="crew__iteam__job-title">UI Designer</p>
-            <ul class="social-icons">
+            <ul class="social-icons list">
               <li class="soc-iteam">
                 <a href="#" class="soc-link-item">
                   <svg class="icon-instagram">
@@ -284,38 +397,44 @@
         </ul>
       </div>
     </section>
-    <section class="section clients">
+    <section class="clients section">
       <div class="container">
-        <h2 class="section_title">Постійні клієнти</h2>
-        <ul class="clients-list">
-          <li class="client-iteam"><button class="client-iteam__button"><svg class="svg" width="41" height="47">
+        <h2 class="section__title">Постійні клієнти</h2>
+        <ul class="client__list list">
+          <li class="client__iteam"><a href="#" class="client-iteam__link"><svg class="client__svg" width="106"
+                height="60">
                 <use href="./images/icons.svg#icon-logo-yaco"></use>
-              </svg></button></li>
-          <li class="client-iteam"><button class="client-iteam__button"><svg class="svg" width="40" height="52">
+              </svg></a></li>
+          <li class="client__iteam"><a href="#" class="client-iteam__link"><svg class="client__svg" width="106"
+                height="60">
                 <use href="./images/icons.svg#icon-logo-company"></use>
-              </svg></button></li>
-          <li class="client-iteam"><button class="client-iteam__button"><svg class="svg" width="44" height="42">
+              </svg></a></li>
+          <li class="client__iteam"><a href="#" class="client-iteam__link"><svg class="client__svg" width="106"
+                height="60">
                 <use href="./images/icons.svg#icon-company-two"></use>
-              </svg></button></li>
-          <li class="client-iteam"><button class="client-iteam__button"><svg class="svg" width="84" height="40">
+              </svg></a></li>
+          <li class="client__iteam"><a href="#" class="client-iteam__link"><svg class="client__svg" width="106"
+                height="60">
                 <use href="./images/icons.svg#icon-foster-logo"></use>
-              </svg></button></li>
-          <li class="client-iteam"><button class="client-iteam__button"><svg class="svg" width="62" height="45">
+              </svg></a></li>
+          <li class="client__iteam"><a href="#" class="client-iteam__link"><svg class="client__svg" width="106"
+                height="60">
                 <use href="./images/icons.svg#icon-brand"></use>
-              </svg></button></li>
-          <li class="client-iteam"><button class="client-iteam__button"><svg class="svg" width="94" height="44">
+              </svg></a></li>
+          <li class="client__iteam"><a href="#" class="client-iteam__link"><svg class="client__svg" width="106"
+                height="60">
                 <use href="./images/icons.svg#icon-tag-line"></use>
-              </svg></button></li>
+              </svg></a></li>
         </ul>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container footer__blox">
-      <div class="footer__blox__addres-box">
-        <a href="#" class="logo"><span class="logo__accent-blue">Web</span>Studio</a>
+      <div class="footer__block addres-box">
+        <a href="#" class="footer__logo logo"><span class="logo__accent-blue">Web</span>Studio</a>
         <address class="addres-box__address">
-          <ul>
+          <ul class="address__list list">
             <li>
               <a class="loc" href="#">м. Київ, пр-т Лесі Українки, 26</a>
             </li>
@@ -326,9 +445,9 @@
           </ul>
         </address>
       </div>
-      <div class="footer__blox__social-contact">
+      <div class="footer__block social-contact">
         <p class="footer-title">приєднуйтесь</p>
-        <ul class="social-icons-footer">
+        <ul class="social-icons-footer list">
           <li class="soc-iteam">
             <a href="#" class="soc-footer-link">
               <svg class="icon-instagram">
@@ -360,11 +479,11 @@
         </ul>
       </div>
       <!-- Subscribe Form -->
-      <div class="footer__blox__subscribe">
+      <div class="footer__block subscribe">
         <p class="footer-title">Підпишіться на розсилку</p>
         <form class="footer-form-subscribe">
-          <input type="email" name="user_email" class="form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            placeholder="E-mail" />
+          <input type="email" name="user_email" class="footer-form__input"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" />
           <button type="submit" class="button subscribe-btn">Підписатися<svg class="svg" width="24" height="24">
               <use href="./images/icons.svg#icon-send"></use>
             </svg></button>
@@ -434,6 +553,7 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

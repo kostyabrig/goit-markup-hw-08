@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 12px;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
 }
 .modal-form-title {
     font-style: normal;

@@ -1,12 +1,24 @@
 .section {
-    padding: 94px 0;
-}
-.section_title {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+  @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+      }
+  }
+.section__title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--studio-dark);
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 28px;
+    line-height: 1.2;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.17;
+        margin-bottom: 50px;
+      }
 }
