@@ -636,11 +636,16 @@ button.modal-close-btn {
   margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.14;
+  color: var(--studio-dark);
 }
 @media screen and (min-width: 768px) {
   .features__iteam-title {
     text-align: left;
   }
+}
+
+.features__iteam-text {
+  line-height: 1.7;
 }
 
 .whatwedo {
