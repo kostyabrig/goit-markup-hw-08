@@ -12,7 +12,6 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
-          gap: 60px;
           padding-left: 0px;
       }
       
@@ -142,7 +141,11 @@ margin-bottom: 9px;
     fill:var(--studio-white);
     align-items: center;
 }
-
+.subscribe {
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+  }
+}
 .subscribe-btn {
     display: flex;
     align-items: center;

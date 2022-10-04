@@ -748,7 +748,7 @@ button.modal-close-btn {
 .social-icons {
   display: flex;
   justify-content: space-evenly;
-  margin: 16px 32px 30px;
+  margin: 16px 0 0;
 }
 
 .soc-link-item {
@@ -961,7 +961,6 @@ button.modal-close-btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 60px;
     padding-left: 0px;
   }
 }
@@ -1112,6 +1111,12 @@ button.modal-close-btn {
   margin-left: 10px;
   fill: var(--studio-white);
   align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-left: auto;
+  }
 }
 
 .subscribe-btn {
