@@ -68,6 +68,7 @@ button, input[type=submit], input[type=reset] {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -564,7 +565,6 @@ button.modal-close-btn {
 
 .hero__title {
   text-transform: uppercase;
-  width: 300px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
@@ -573,9 +573,14 @@ button.modal-close-btn {
   letter-spacing: 0.06em;
   color: var(--studio-white);
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 360px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
